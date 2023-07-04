@@ -2,16 +2,16 @@ package com.arpa.example.wifidatacollector;
 
 import static org.junit.Assert.assertEquals;
 
-import com.arpa.example.wifidatacollector.beacon.BeaconBase;
-import com.arpa.example.wifidatacollector.beacon.NetworkEncryptionMode;
-import com.arpa.example.wifidatacollector.beacon.TaggedBeaconPair;
+import net.hunterwatson.wifidatacollector.beacon.beacon.BeaconBase;
+import net.hunterwatson.wifidatacollector.beacon.beacon.NetworkEncryptionMode;
+import net.hunterwatson.wifidatacollector.beacon.beacon.TaggedBeaconPair;
 
 import org.junit.Assert;
 import org.junit.Test;
 
 public class TaggedBeaconPairUnitTests {
     @Test
-    public void TaggedBeaconPairSanity() {
+    public void TaggedBeaconPair_sanityCheck() {
         String testName = "12345";
         int testSignalStrength = -60;
 

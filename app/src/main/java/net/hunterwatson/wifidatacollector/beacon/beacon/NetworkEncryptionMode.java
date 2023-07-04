@@ -1,4 +1,4 @@
-package com.arpa.example.wifidatacollector.beacon;
+package net.hunterwatson.wifidatacollector.beacon.beacon;
 
 
 // This is a list of all encryption modes

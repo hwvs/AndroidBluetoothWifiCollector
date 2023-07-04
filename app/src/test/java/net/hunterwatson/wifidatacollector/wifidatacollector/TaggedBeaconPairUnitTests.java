@@ -18,7 +18,7 @@ public class TaggedBeaconPairUnitTests {
         // Factory test - Setup and Bootstrap
         BeaconBase testBeaconBase = new BeaconBase(testName, "11:11:11:11:11:11", testSignalStrength,
                 NetworkEncryptionMode.WPA2, "Audio");
-        TaggedBeaconPair taggedBeaconPair = TaggedBeaconPair.Factory.Produce(testBeaconBase);
+        TaggedBeaconPair taggedBeaconPair = TaggedBeaconPair.Factory.Build(testBeaconBase);
 
         // Assertions
         Assert.assertNotNull("FAILED ASSERT: TaggedBeaconPair produced a null beacon", taggedBeaconPair.getBeacon());

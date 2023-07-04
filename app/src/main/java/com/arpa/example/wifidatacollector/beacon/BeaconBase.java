@@ -1,4 +1,4 @@
-package com.arpa.example.wifidatacollector;
+package com.arpa.example.wifidatacollector.beacon;
 import java.util.Objects;
 
 public class BeaconBase {

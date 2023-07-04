@@ -11,7 +11,7 @@ import org.junit.Test;
 
 public class TaggedBeaconPairUnitTests {
     @Test
-    public void TaggedBeaconPairSanity() {
+    public void TaggedBeaconPair_sanityCheck() {
         String testName = "12345";
         int testSignalStrength = -60;
 

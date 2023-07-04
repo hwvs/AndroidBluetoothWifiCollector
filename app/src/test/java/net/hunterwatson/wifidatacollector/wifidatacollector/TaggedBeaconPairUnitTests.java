@@ -1,4 +1,4 @@
-package com.arpa.example.wifidatacollector;
+package net.hunterwatson.wifidatacollector.wifidatacollector;
 
 import static org.junit.Assert.assertEquals;
 

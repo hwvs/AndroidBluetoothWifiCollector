@@ -1,4 +1,4 @@
-package net.hunterwatson.wifidatacollector.beacon.beacon;
+package net.hunterwatson.wifidatacollector.beacon.options;
 
 
 // This is a list of all encryption modes

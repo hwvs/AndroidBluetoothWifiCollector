@@ -1,4 +1,4 @@
-package net.hunterwatson.wifidatacollector.beacon.beacon;
+package net.hunterwatson.wifidatacollector.beacon.data;
 
 import org.jetbrains.annotations.NotNull;
 

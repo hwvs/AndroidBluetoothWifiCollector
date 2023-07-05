@@ -1,4 +1,6 @@
-package net.hunterwatson.wifidatacollector.beacon.beacon;
+package net.hunterwatson.wifidatacollector.beacon.data;
+import net.hunterwatson.wifidatacollector.beacon.options.NetworkEncryptionMode;
+
 import java.util.Objects;
 
 public class BeaconBase {

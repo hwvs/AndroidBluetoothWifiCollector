@@ -2,9 +2,9 @@ package net.hunterwatson.wifidatacollector.wifidatacollector;
 
 import static org.junit.Assert.assertEquals;
 
-import net.hunterwatson.wifidatacollector.beacon.beacon.BeaconBase;
-import net.hunterwatson.wifidatacollector.beacon.beacon.NetworkEncryptionMode;
-import net.hunterwatson.wifidatacollector.beacon.beacon.TaggedBeaconPair;
+import net.hunterwatson.wifidatacollector.beacon.data.BeaconBase;
+import net.hunterwatson.wifidatacollector.beacon.options.NetworkEncryptionMode;
+import net.hunterwatson.wifidatacollector.beacon.data.TaggedBeaconPair;
 
 import org.junit.Assert;
 import org.junit.Test;

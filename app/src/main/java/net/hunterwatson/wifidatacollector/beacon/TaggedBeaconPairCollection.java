@@ -4,15 +4,18 @@ import net.hunterwatson.wifidatacollector.beacon.data.TaggedBeaconPair;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.security.InvalidParameterException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-public class TaggedBeaconPairCollector {
-    private ArrayList<TaggedBeaconPair> pairList;
+import kotlin.NotImplementedError;
 
-    public TaggedBeaconPairCollector() {
+public class TaggedBeaconPairCollection {
+    private ArrayList<TaggedBeaconPair> pairList; // Init in constructor
+
+    public TaggedBeaconPairCollection() {
         pairList = new ArrayList<TaggedBeaconPair>(); // Initialize the list
     }
 
@@ -27,6 +30,16 @@ public class TaggedBeaconPairCollector {
 
         // Add is to the end of the ArrayList
         pairList.add(pair);
+    }
+
+    public List<TaggedBeaconPair> getTail(int amount) {
+        if(amount < 0) {
+            throw new InvalidParameterException("Amount must be >= 0, but received " + amount);
+        }
+
+        // TODO: Implement Method Body
+
+        throw new NotImplementedError("getTail() is not implemented");
     }
 
     // Pass a Predicate to filter results (Eg;  Instant (time);  Name;  etc.)

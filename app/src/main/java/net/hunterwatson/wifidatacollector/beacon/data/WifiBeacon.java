@@ -58,6 +58,7 @@ public class WifiBeacon extends BeaconBase {
             WifiBeacon beacon = new WifiBeacon(macAddressHRList, scanResult.level);
 
             // Set the fields
+            beacon.SSID = SSID;
             beacon.BSSID = scanResult.BSSID;
             beacon.frequency = scanResult.frequency;
 

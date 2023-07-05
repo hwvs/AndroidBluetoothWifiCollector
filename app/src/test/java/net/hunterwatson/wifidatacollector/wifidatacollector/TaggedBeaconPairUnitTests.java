@@ -4,7 +4,6 @@ import static org.junit.Assert.assertEquals;
 
 import android.net.wifi.ScanResult;
 
-import net.hunterwatson.wifidatacollector.beacon.data.BeaconBase;
 import net.hunterwatson.wifidatacollector.beacon.data.WifiBeacon;
 import net.hunterwatson.wifidatacollector.beacon.data.TaggedBeaconPair;
 
@@ -18,12 +17,12 @@ public class TaggedBeaconPairUnitTests {
         int testSignalStrength = -60;
 
         ScanResult scanResult = new ScanResult();
-        scanResult.BSSID = testName;
+        scanResult.SSID = testName;
         scanResult.level = testSignalStrength;
 
         // Factory test - Setup and Bootstrap
         WifiBeacon testBeaconBase = WifiBeacon.Factory.fromScanResult(scanResult);
-        TaggedBeaconPair taggedBeaconPair = TaggedBeaconPair.Factory.Build(testBeaconBase);
+        TaggedBeaconPair taggedBeaconPair = TaggedBeaconPair.Factory.build(testBeaconBase);
 
         // Assertions
         Assert.assertNotNull("FAILED ASSERT: TaggedBeaconPair produced a null beacon", taggedBeaconPair.getBeacon());

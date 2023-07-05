@@ -70,7 +70,7 @@ public class TaggedBeaconPair {
          * @return A TaggedBeaconPair object
          */
         @NotNull
-        public static TaggedBeaconPair Build(@NotNull BeaconBase beacon) {
+        public static TaggedBeaconPair build(@NotNull BeaconBase beacon) {
             TaggedBeaconPair beaconPair = new TaggedBeaconPair(beacon);
             beaconPair.instantTagged = Instant.now(); // Init with the current Instant (time)
 

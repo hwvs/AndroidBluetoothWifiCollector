@@ -25,13 +25,25 @@ public class TaggedBeaconPairUnitTests {
         TaggedBeaconPair taggedBeaconPair = TaggedBeaconPair.Factory.build(testBeaconBase);
 
         // Assertions
-        Assert.assertNotNull("FAILED ASSERT: TaggedBeaconPair produced a null beacon", taggedBeaconPair.getBeacon());
-        Assert.assertTrue("FAILED ASSERT: Attributes were mangled by TaggedBeaconPair.Factory.Produce." +
-                " Original BeaconBase is not equal to the internal of the TaggedBeaconPair",
-                taggedBeaconPair.getBeacon().equals(testBeaconBase));
-        Assert.assertTrue("FAILED ASSERT: Field '.getName()' was mangled by TaggedBeaconPair.Factory.Produce",
-                taggedBeaconPair.getBeacon().getNameIdentifier().equals(testName));
-        Assert.assertTrue("FAILED ASSERT: Field, '.getSignalStrength()' was mangled by TaggedBeaconPair.Factory.Produce",
-                taggedBeaconPair.getBeacon().getSignalStrengthRSSI() == testSignalStrength);
+        Assert.assertNotNull("FAILED ASSERT: TaggedBeaconPair produced a null beacon",
+                taggedBeaconPair.getBeacon()
+        );
+
+        Assert.assertTrue("FAILED ASSERT: Attributes were mangled by " +
+                        "TaggedBeaconPair.Factory.Produce. Original BeaconBase is not equal " +
+                        "to the internal of the TaggedBeaconPair",
+                taggedBeaconPair.getBeacon().equals(testBeaconBase)
+        );
+
+        Assert.assertTrue("FAILED ASSERT: Field '.getName()' was mangled by " +
+                        "TaggedBeaconPair.Factory.Produce",
+                taggedBeaconPair.getBeacon().getNameIdentifier().equals(testName)
+        );
+
+        Assert.assertTrue("FAILED ASSERT: Field, '.getSignalStrength()' was mangled by " +
+                        "TaggedBeaconPair.Factory.Produce",
+                taggedBeaconPair.getBeacon().getSignalStrengthRSSI() == testSignalStrength
+        );
+
     }
 }

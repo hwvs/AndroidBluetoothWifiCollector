@@ -18,7 +18,7 @@ The server is an Apache Kafka or RedPanda instance. The data is sent to the serv
 * `WifiBeacon` / `BluetoothBeacon` - Classes that store the data for a single Wifi or Bluetooth beacon. Parent class is `BeaconBase`.
 
 ## Tests (Unit)
-* `BeaconScannerTest` - Tests the `BeaconScanner` class. Uses [Mockito](https://site.mockito.org/) to mock the `WifiManager` and `BluetoothAdapter` classes.
+* `BeaconScannerTest` - Tests the `BeaconScanner` class. (TODO) Uses [Mockito](https://site.mockito.org/) to mock the `WifiManager` and `BluetoothAdapter` classes.
 * `TaggedBeaconPairUnitTests` - Tests the `TaggedBeaconPair` class using mock data.
 * *(More that are not documented in this README)*
 

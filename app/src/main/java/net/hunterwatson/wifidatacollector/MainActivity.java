@@ -126,6 +126,8 @@ public class MainActivity extends AppCompatActivity {
             // Ask for permission using toast
             Log.d("MainActivity", "Permission not granted");
 
+
+
             String message = "Please grant location permission to use this app";
             int duration = Snackbar.LENGTH_INDEFINITE;
             //View view = findViewById(R.id.nav_host_fragment_content_main);
@@ -181,19 +183,24 @@ public class MainActivity extends AppCompatActivity {
 
 
         // Now print out the results to the textViewResults
-        TextView textViewResults = findViewById(R.id.textViewResults);
-        textViewResults.setText(""); // Clear text
-
-        // Add to textViewResults text
-        for (TaggedBeaconPair beaconPair : taggedBeaconPairCollection.getPairList()) {
-            textViewResults.setText(textViewResults.getText() + "\n" + beaconPair.toString());
-        }
-
-        // Scroll to bottom
-        textViewResults.post(new Runnable() {
+        runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                textViewResults.scrollTo(0, textViewResults.getBottom());
+                TextView textViewResults = findViewById(R.id.textViewResults);
+                textViewResults.setText(""); // Clear text
+
+                // Add to textViewResults text
+                for (TaggedBeaconPair beaconPair : taggedBeaconPairCollection.getPairList()) {
+                    textViewResults.setText(textViewResults.getText() + "\n" + beaconPair.toString());
+                }
+
+                // Scroll to bottom
+                textViewResults.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        textViewResults.scrollTo(0, textViewResults.getBottom());
+                    }
+                });
             }
         });
 

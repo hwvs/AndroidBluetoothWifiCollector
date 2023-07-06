@@ -34,6 +34,7 @@ public class TaggedBeaconPair {
      * Hidden (private) constructor - Due to "TaggedBeaconPairFactory
      * as a factory class
      * @param beacon The BeaconBase object to wrap
+     * @see TaggedBeaconPair.Factory
      */
     private TaggedBeaconPair(@NotNull BeaconBase beacon) {
         this.beacon = beacon;
@@ -88,5 +89,13 @@ public class TaggedBeaconPair {
             throw new NotImplementedError("BuildFromJSON is not implemented");
         }
 
+    }
+
+    @Override
+    public String toString() {
+        return "TaggedBeaconPair{" +
+                "instantTagged=" + instantTagged +
+                ", beacon=" + beacon +
+                '}';
     }
 }

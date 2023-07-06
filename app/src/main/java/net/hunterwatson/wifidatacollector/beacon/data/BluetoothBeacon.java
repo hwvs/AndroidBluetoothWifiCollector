@@ -85,4 +85,14 @@ public class BluetoothBeacon extends BeaconBase {
 
         }
     }
+
+
+    @Override
+    public String toString() {
+        return "BluetoothBeacon{" +
+                "nameIdentifier='" + getNameIdentifier() + '\'' +
+                ", signalStrengthRSSI=" + getSignalStrengthRSSI() +
+                ", macAddressHRList=" + getMacAddressHRList() +
+                '}';
+    }
 }

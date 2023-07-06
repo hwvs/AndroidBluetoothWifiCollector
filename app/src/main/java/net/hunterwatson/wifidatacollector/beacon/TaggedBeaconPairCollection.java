@@ -53,7 +53,7 @@ import kotlin.NotImplementedError;
      * Push a TaggedBeaconPair object to the list, and sort the list if necessary
      * @param pair The TaggedBeaconPair object to push (Must not be null)
      */
-    public void Push(@NotNull TaggedBeaconPair pair) {
+    public void push(@NotNull TaggedBeaconPair pair) {
         // Doing it wrong
         if(pair == null) {
             throw new NullPointerException("Cannot pass a null TaggedBeaconPair to " +

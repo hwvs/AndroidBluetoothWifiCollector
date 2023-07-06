@@ -65,4 +65,16 @@ public class WifiBeacon extends BeaconBase {
             return beacon;
         }
     }
+
+    @Override
+    public String toString() {
+        return "WifiBeacon{" +
+                "nameIdentifier='" + getNameIdentifier() + '\'' +
+                ", signalStrengthRSSI=" + getSignalStrengthRSSI() +
+                ", getSecurityTypes=" + getSecurityTypes +
+                ", SSID='" + SSID + '\'' +
+                ", BSSID='" + BSSID + '\'' +
+                ", frequency=" + frequency +
+                '}';
+    }
 }

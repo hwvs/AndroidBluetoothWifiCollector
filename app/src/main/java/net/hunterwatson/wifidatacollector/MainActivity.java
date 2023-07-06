@@ -27,6 +27,7 @@ import net.hunterwatson.wifidatacollector.beacon.TaggedBeaconPairCollection;
 import net.hunterwatson.wifidatacollector.beacon.data.TaggedBeaconPair;
 import net.hunterwatson.wifidatacollector.beacon.data.WifiBeacon;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -82,14 +83,28 @@ public class MainActivity extends AppCompatActivity {
         // Combine array to , separated string
         Log.d("MainActivity", String.join(", ", scanResults.toString()));
 
-        TaggedBeaconPairCollection taggedBeaconPairCollection = new TaggedBeaconPairCollection();
 
+
+        // Filter out duplicates
+        ArrayList<WifiBeacon> uniqueBeacons = new ArrayList<WifiBeacon>();
         for (ScanResult scanResult : scanResults) {
             WifiBeacon beacon = WifiBeacon.Factory.fromScanResult(scanResult);
+
+            // Check for duplicates .equals
             if (beacon != null) {
+                if (!uniqueBeacons.contains(beacon)) {
+                    uniqueBeacons.add(beacon);
+                }
+            }
+        }
+
+        // Create a TaggedBeaconPairCollection
+        TaggedBeaconPairCollection taggedBeaconPairCollection = new TaggedBeaconPairCollection();
+
+        // Add all the unique beacons to the collection
+        for (WifiBeacon beacon : uniqueBeacons) {
                 TaggedBeaconPair beaconPair = TaggedBeaconPair.Factory.build(beacon);
                 taggedBeaconPairCollection.push(beaconPair);
-            }
         }
 
         // Now print out the results to the debugger attached to the app
